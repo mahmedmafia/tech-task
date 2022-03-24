@@ -1,6 +1,7 @@
 module.exports = async function (app) {
   let {Brand,Car,Tyre} = app.models;
-  // define a custom scope
+  //Un Comment This File To Addd Demo Data
+  /*
   app.dataSources.db.automigrate('Brand', function (err) {
     if (err) throw err;
 
@@ -64,4 +65,5 @@ module.exports = async function (app) {
         });
     };
   });
+  */
 };
