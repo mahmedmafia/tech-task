@@ -12,7 +12,7 @@
       "required": true
     },
     "size": {
-      "type": "number",
+      "type": "string",
       "required": true
     }
   },

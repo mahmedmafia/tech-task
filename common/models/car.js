@@ -17,7 +17,7 @@ module.exports = function(Car) {
     let response=[];
     for(let i=0;i<result.length;i++){
       let tyre=await result[i].tyre.get();
-      let newCarResponse={...result[i].__data,tyreSize:tyre?.tyreSize || {}};
+      let newCarResponse={...result[i].__data,tyreSize:tyre?.size || {}};
       response.push(newCarResponse);
     }
 

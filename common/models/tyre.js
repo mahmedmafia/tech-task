@@ -1,22 +1,10 @@
 'use strict';
 
 module.exports = function(Tyre) {
-  // Tyre.afterRemote('find',async(ctx,instance)=>{
-  //   try{
-  //   if(!instance) ctx.result=[];
-  //   const result=ctx.result;
-  //   let response=[];
-  //   for(let i=0;i<result.length;i++){
-  //     let tyre=await result[i].tyre.get();
-  //     let newCarResponse={...result[i].__data,tyreSize:tyre?.tyreSize || {}};
-  //     response.push(newCarResponse);
-  //   }
-
-  //   ctx.result=response;
-  // }catch(err){
-  //   console.log(err);
-  // }
-  // })
+  Tyre.afterRemote('find',async(ctx,instance)=>{
+    if(!instance) ctx.result=[];
+      return;
+  });
   Tyre.afterRemoteError('find',(ctx,next)=>{
     if(!ctx.result.length) ctx.res.end('no Tyres Found');
     next('Error');
