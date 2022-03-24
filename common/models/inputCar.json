@@ -1,0 +1,36 @@
+{
+  "name": "inputCar",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": true,
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "brandId": {
+      "type": "number",
+      "required": true
+    },
+    "tyreId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand"
+    },
+    "tyre": {
+      "type": "belongsTo",
+      "model": "Tyre"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

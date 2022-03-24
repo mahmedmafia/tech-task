@@ -1,0 +1,39 @@
+{
+  "name": "Car",
+  "plural": "Cars",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number",
+      "id": "id"
+    },
+    "tyreSize": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand"
+    },
+    "tyre": {
+      "type": "belongsTo",
+      "model": "Tyre",
+      "options": {}
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

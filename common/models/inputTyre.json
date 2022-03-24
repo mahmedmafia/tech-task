@@ -1,0 +1,26 @@
+{
+  "name": "inputTyre",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "number",
+      "required": true
+    },
+    "brandId": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

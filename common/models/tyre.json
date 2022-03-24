@@ -1,0 +1,35 @@
+{
+  "name": "Tyre",
+  "plural": "tyres",
+  "base": "Model",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "model": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "brand": {
+      "type": "belongsTo",
+      "model": "Brand",
+      "options": {
+        "nestRemoting": false
+      }
+    },
+    "cars": {
+      "type": "hasMany",
+      "model": "Car"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
